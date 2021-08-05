@@ -1,0 +1,17 @@
+$background: #efefef;
+$lfs-blue: #006ac6;
+$lfs-yellow: #fab700;
+$lfs-grey: #75787b;
+body {
+  background-color: $background;
+}
+.table-active{
+  th{
+    text-align: center;
+    transition: 0.3s;
+    &:hover{
+      background: #d9d8d8;
+      cursor: pointer;
+    }
+  }
+}

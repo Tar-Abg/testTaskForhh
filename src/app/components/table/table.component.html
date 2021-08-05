@@ -1,0 +1,25 @@
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr   class="table-active">
+      <th (click)="sortBy('id')" (dblclick)="sortByDown('id')">id <i class="fa fa-angle-down"></i></th>
+      <th (click)="sortBy('firstName')" (dblclick)="sortByDown('firstName')">firstName <i class="fa fa-angle-down"></i></th>
+      <th (click)="sortBy('lastName')" (dblclick)="sortByDown('lastName')">lastName <i class="fa fa-angle-down"></i></th>
+      <th (click)="sortBy('email')" (dblclick)="sortByDown('email')">email <i class="fa fa-angle-down"></i></th>
+      <th (click)="sortBy('phone')" (dblclick)="sortByDown('phone')">phone <i class="fa fa-angle-down"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr  *ngFor="let user of userList"  (click)="selectedUser=user; openModalInfo = true">
+    <td >{{user.id}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+  </tr>
+  </tbody>
+
+
+</table>
+</div>
+<app-user *ngIf="openModalInfo" (closeModal)="openModalInfo = false" [user]="selectedUser"></app-user>

@@ -1,0 +1,7 @@
+<div *ngIf="messages?.length" class="wrapper">
+  <div class="modal">
+    <span (click)="messages.length = 0">x</span>
+    <p *ngFor="let message of messages">{{message}}</p>
+  </div>
+
+</div>

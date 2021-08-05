@@ -1,0 +1,8 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#" (click)="prev()"><</a></li>
+    <input type="text" [(ngModel)]="pageIndex" #input (keydown.enter)="onChangePage(pageIndex)" [value]="currentPage">
+    <li class="page-item"><a class="page-link" href="#" (click)="next()">></a></li>
+    <li class="page-item"><a class="page-link" href="#" (click)="onChangePage(totalPages)">{{totalPages}}</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,42 @@
+<div class="modal-info">
+
+  <div class="modalBody">
+    <div class="modalHeader">
+      <span class="close-info-modal" (click)="closeModal.emit()">X</span>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <span>id</span>
+        <span>{{user?.id}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>firstName</span>
+        <span>{{user?.firstName}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>lastName</span>
+        <span>{{user?.lastName}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>Email</span>
+        <span>{{user?.email}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>Phone</span>
+        <span>{{user?.phone}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>City</span>
+        <span>{{user?.address?.city}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>Zip</span>
+        <span>{{user?.address?.zip}}</span>
+      </li>
+      <li class="list-group-item">
+        <span>State</span>
+        <span>{{user?.address?.state}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
